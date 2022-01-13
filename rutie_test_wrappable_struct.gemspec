@@ -8,13 +8,11 @@ Gem::Specification.new do |spec|
   spec.authors = ['Ilya Zub']
   spec.email = ['282605+ilyazub@users.noreply.github.com']
 
-  spec.summary = 'Example of wrappable Rust struct with lifetime using Rutie'
-  spec.description = 'Example of wrappable Rust struct with lifetime using Rutie.'
+  spec.summary = 'Example of wrappable Rust struct with lifetime using Wasmer'
+  spec.description = 'Example of wrappable Rust struct with lifetime using Wasmer.'
   spec.homepage = 'https://github.com/ilyazub/rutie_test_wrappable_struct'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 2.6.0'
-
-  spec.metadata['allowed_push_host'] = "TODO: Set to your gem server 'https://example.com'"
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = spec.homepage
@@ -33,9 +31,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   spec.extensions = ['src']
 
-  spec.add_dependency 'rutie', '~> 0.0.4'
+  spec.add_dependency 'wasmer', '~> 1.0.0'
 
-  spec.add_development_dependency 'bundler'
+  spec.add_development_dependency 'bundler', '~> 2.2'
   spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'standard', '~> 1.3'

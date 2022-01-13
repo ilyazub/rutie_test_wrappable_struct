@@ -9,7 +9,7 @@ require 'standard/rake'
 
 namespace :extension do
   task :compile do
-    sh 'cargo build'
+    sh 'rustc --target wasm32-unknown-unknown -O --crate-type=cdylib ./src/lib.rs -o ./target/lib.wasm'
   end
 
   task :test do
@@ -26,7 +26,7 @@ namespace :extension do
 
   task build: :compile
 
-  task default: ['extension:clean', 'extension:build', 'extension:test', 'extension:lint']
+  task default: ['extension:clean', 'extension:build']
 end
 
 task default: [:clobber, 'extension:default', :spec, :standard]

@@ -10,8 +10,7 @@ name = "rutie_test_wrappable_struct_lib"
 crate-type = ["cdylib"]
 
 [dependencies]
-lazy_static = "1.4.0"
-rutie = "0.8.3"
+wasmer = "2.1.1"
 
 [profile.dev.package."*"]
 # Set the default for dependencies in Development mode.
